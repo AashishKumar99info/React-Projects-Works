@@ -3,7 +3,7 @@ function ExpenseItem() {
     <div>
       <body>
         <header>
-          <h1>ExpenseItems</h1>
+          <h1><i>Expense Items</i></h1>
         </header>
         <h2>
           Food Rs 10
