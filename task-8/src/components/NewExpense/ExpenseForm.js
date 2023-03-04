@@ -21,7 +21,7 @@ const [enteredDate,setEnteredDate] = useState("")
         setEnteredDate(e.target.value)
     } 
 
-    const handleSubmission = (e) => {
+    const submitHandler = (e) => {
         e.preventDefault();
         const ExpenseDate={
             Title: enteredTitle,
@@ -32,7 +32,7 @@ const [enteredDate,setEnteredDate] = useState("")
     }
     
     return (
-        <form onSubmit={handleSubmission}>
+        <form onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Title</label>
