@@ -7,28 +7,28 @@ const App = () => {
       id: "e1",
       date: new Date(),
       title: "New car",
-      amount: "RS 4 Crs",
+      amount: "4 Crs",
       location: "Delhi",
     },
     {
       id: "e2",
       date: new Date(),
       title: "Decoratives",
-      amount: "RS 1,000",
+      amount: "1,000",
       location: "Delhi",
     },
     {
       id: "e3",
       date: new Date(),
       title: "Electricity bill",
-      amount: "RS 8,000",
+      amount: "8,000",
       location: "Delhi",
     },
     {
       id: "e4",
       date: new Date(),
       title: "Domestic props",
-      amount: "RS 10,000",
+      amount: "10,000",
       location: "Delhi",
     }
   ];
