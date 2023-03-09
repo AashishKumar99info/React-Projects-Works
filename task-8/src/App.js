@@ -37,7 +37,7 @@ let DUMMY__EXPENSE = [
 
 
 const App = () => {
-  const [expenses,setExpenses]=useState(DUMMY__EXPENSE)
+  const [expenses,setExpenses] = useState(DUMMY__EXPENSE)
 
   const addExpenseHandler = (expense) => {
     let updatedExpense = [expense, ...expenses]
@@ -46,6 +46,12 @@ const App = () => {
     console.log("In App.js")
     console.log(expense)
   }
+  // instead of above function we can write this arrow function
+  // const addExpenseHandler = (expense) => {
+  //   setExpenses((prevExpenses) => {
+  //     return [expense, ...prevExpenses];
+  //   });
+  // };
 
   return (
     <div>

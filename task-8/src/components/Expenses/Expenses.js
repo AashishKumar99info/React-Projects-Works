@@ -22,10 +22,12 @@ function Expenses(props){
   });
 
     return (
+      <div>
         <Card className = "expenses">
           <ExpensesFilter selected = {filterYear} onChangeFilter = {filterChangeHandler} />
           <ExpensesList items = {filteredExpenses} />
         </Card>
+      </div>
     );
 }
 
