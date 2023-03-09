@@ -16,6 +16,7 @@ function ExpenseItem(props){
   //   setTitle("This is the updated title") 
   // }
   return (
+    <li>
     <Card className='expense-item'>
       <ExpenseDate date={props.date} />
       <div className='expense-item__description'>
@@ -25,6 +26,7 @@ function ExpenseItem(props){
       {/* <button onClick={clickHandler}>Delete</button> */}
       {/* <button onClick={editHandler}>Change title </button> */}
     </Card>
+    </li>
   );
 }
 
