@@ -15,9 +15,14 @@ function Expenses(props){
     setFilteredYear(selectedYear)
   }
 
-  const filteredExpenses = props.items.filter(expense => {
-    return expense.date.getFullYear().toString() === filterYear;
+  let filteredExpenses = props.items.filter(expense => {
+    return expense.date.getFullYear().toString() === filterYear ;
   });
+   
+  if(filterYear==="All")
+  {
+  filteredExpenses=props.items
+  }
 
     return (
         <Card className = "expenses">
