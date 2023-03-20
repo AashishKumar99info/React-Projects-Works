@@ -1,24 +1,33 @@
-import React from "react";
+        import React, { useRef, useImperativeHandle } from "react";
 
-import "./Input.css"
+        import "./Input.css";
 
-const Input = props => {
-    return (
-        <div
-          className={`${"control"} ${
-            props.isValid === false ? "invalid" : ''
-          }`}
-        >
-          <label htmlFor= {props.id} >{props.label}</label>
-          <input
-            type= {props.type}
-            id= {props.id}
-            value={props.value}
-            onChange={props.onChange}
-            onBlur={props.onBlur}
-          />
-        </div>
-    )
-}
+        const Input = React.forwardRef((props, ref) => {
+        const inputRef = useRef();
 
-export default Input;
+        const activate = () => {
+            inputRef.current.focus();
+        };
+
+        useImperativeHandle(ref, () => {
+            return {
+            focus: activate,
+            };
+        });
+
+        return (
+            <div className={`${"control"} ${props.isValid === false ? "invalid" : ""}`}>
+            <label htmlFor={props.id}>{props.label}</label>
+            <input
+                ref={inputRef}
+                type={props.type}
+                id={props.id} 
+                value={props.value}
+                onChange={props.onChange}
+                onBlur={props.onBlur}
+            />
+            </div>
+        );
+        });
+
+        export default Input;
